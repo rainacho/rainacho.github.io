@@ -1,0 +1,71 @@
+$(document).ready(function(){
+    // Declare Variable
+    const title = $('#title');
+    const author = $('#author');
+    const isbn = $('#isbn');
+    const list = $('#book-list');
+
+    // Book Constructor
+    function Book(title, author, isbn){
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn; 
+    }
+
+    // UI Constructor
+    function UI(){}
+
+    // Add Book To List
+    UI.prototype.addBookTolist = function(b){
+        list.append(`<tr>
+                        <th>${b.title}</th>
+                        <th>${b.author}</th>
+                        <th>${b.isbn}</th>
+                        <th class="delete"><span>X</span></th>
+                     </tr>`);
+    }
+    // Clear Fields
+    UI.prototype.clearFields = function(){
+        title.val(''); 
+        author.val(''); 
+        isbn.val('');
+    }
+    // Delete List
+    UI.prototype.deleteItem = function(){}
+
+    // Event Listeners
+    $(document).on('click', function(e){
+        console.log($(e.target).parent());
+    })
+    $('#book-form').validator().on('submit',function(e){
+        if (e.isDefaultPrevented()) {
+            // Handle the invalid form...
+            console.log('invalid form');
+        } else {
+            // Get Form Values
+            const title = $('#title').val();
+            const author = $('author').val();
+            const isbn = $('#isbn').val();
+
+            // Instantiate Book
+            const book = new Book(title,author,isbn);
+
+            // Instatiate UI
+            const ui = new UI();
+
+            // Add book to list
+            ui.addBookTolist(book);
+
+            // Clear fields
+            ui.clearFields();
+
+            
+            //bookListsContainer.append(bookList);             
+            // Clear Input Fields
+            // title.val(''); 
+            // author.val(''); 
+            // isbn.val('');
+        }
+        e.preventDefault();
+    });
+})
