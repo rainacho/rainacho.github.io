@@ -1,309 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="resources/img/profile_icon.png" type="image/x-icon" />
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Interactive logo AD</title>
 
-        <!-- FOR GOOGLE -->
-        <meta name="description" content="Raina Cho | Frontend Developer | UX Designer" />
-        <meta name="keywords" content="ux, user experience, user-centered, mobile design, maintainable front-end components" />
-        <meta name="author" content="Raina Cho" />
-        <link rel="author" href="https://aboutme.google.com/u/0/?referer=gplus">
-        <meta name="copyright" content="2018" />
+		<!-- Welcome to ZIM at http://zimjs.com - Code Interactive Media Pizzazz! 	        -->
+		<!-- ZIM runs on the HTML Canvas powered by JavaScript and CreateJS http://createjs.com -->
+		<!-- Founded by Inventor Dan Zen - http://danzen.com - Canadian New Media Award Winner 	-->
+		<!-- ZIM is free to use. You can donate to help improve ZIM at http://zimjs.com/donate 	-->
 
-        <!-- FOR FACEBOOK -->
-        <meta property="og:title" content="Welcome to My Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://www.rainadesign.co/resources/img/logo-fb.jpg" /> <!-- Facebook recommended: 1200 x 630 - ideal: 1200 x 1200 square image -->
-        <meta property="og:url" content="http://www.rainadesign.co" />
-        <meta property="og:description" content="Raina Cho | Frontend Developer | UX Designer" />
-
-        <!-- FOR TWITTER -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Welcome to My Portfolio" />
-        <meta name="twitter:description" content="Raina Cho | Frontend Developer | UX Designer" />
-        <meta name="twitter:url" content="http://www.rainadesign.co/resume.html" />
-        <meta name="twitter:image" content="http://www.rainadesign.co/resources/img/logo-tw.jpg" />
-
-        <!--  IMAGES FOR THE TWITTER CARD SHOULD BE AT LEAST 280PX IN WIDTH, AND AT LEAST 150PX IN HEIGHT. IMAGE MUST BE LESS THAN 1MB IN SIZE. IDEAL IS 1,024 X 512 -->
-
-        <!-- CSS -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Raina Cho | Frontend Developer / UX Designer</title>
-        <link rel="stylesheet" href="vendors/css/normalize.css">
-        <link rel="stylesheet" href="vendors/css/ionicons.min.css">
-        <link rel="stylesheet" href="vendors/css/grid.css">
-        <link rel="stylesheet" href="vendors/css/animate.css">
-        <link rel="stylesheet" href="resources/css/style.css">
-        <link rel="stylesheet" href="resources/css/mediaqueries.css">
-
-        <!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto" rel="stylesheet">
-		
 		<script src="https://d309knd7es5f10.cloudfront.net/createjs.min.js"></script>
-<script>
-	var zon = true; // set to false to turn off console messages from zim
-	var zns = false; // set to true to require zim namespace - eg. new zim.Frame()
-</script>
-<script src="https://d309knd7es5f10.cloudfront.net/zim_6.3.2.js"></script>
-<!-- use zimjs.com/code/distill for minified individual functions! -->
+		<script>
+			var zon = true; // set to false to turn off console messages from zim
+			var zns = false; // set to true to require zim namespace - eg. new zim.Frame()
+		</script>
+		<script src="https://d309knd7es5f10.cloudfront.net/zim_6.3.2.js"></script>
+		<!-- use zimjs.com/code/distill for minified individual functions! -->
 
-<style>
+		<style>
+			body {
+				background-color: #ccc;
+			}
 
-    body {background-color:#ccc;}
+			@font-face {
+				font-family: TexGyreAdventor;
+				src: url(assets/texgyreadventor-bold.otf);
+			}
+		</style>
 
-		@font-face {
-		font-family: TexGyreAdventor;
-		src: url(assets/texgyreadventor-bold.otf);
-		}
-</style>
+		<script>
+			// SCALING OPTIONS
+			// scaling can have values as follows with full being the default
+			// "fit"	sets canvas and stage to dimensions and scales to fit inside window size
+			// "outside"	sets canvas and stage to dimensions and scales to fit outside window size
+			// "full"	sets stage to window size with no scaling
+			// "tagID"	add canvas to HTML tag of ID - set to dimensions if provided - no scaling
 
-<script>
+			var scaling = 'logo'; // this will resize to fit inside the screen dimensions
+			var width = 800;
+			var height = 400;
 
-// SCALING OPTIONS
-// scaling can have values as follows with full being the default
-// "fit"	sets canvas and stage to dimensions and scales to fit inside window size
-// "outside"	sets canvas and stage to dimensions and scales to fit outside window size
-// "full"	sets stage to window size with no scaling
-// "tagID"	add canvas to HTML tag of ID - set to dimensions if provided - no scaling
+			// as of ZIM 5.5.0 you do not need to put zim before ZIM functions and classes
+			var frame = new Frame(scaling, width, height);
+			frame.on('ready', function () {
+				zog('ready from ZIM Frame'); // logs in console (F12 - choose console)
 
-var scaling = "logo"; // this will resize to fit inside the screen dimensions
-var width = 800;
-var height = 400;
+				var stage = frame.stage;
+				var stageW = frame.width;
+				var stageH = frame.height;
+				frame.outerColor = 'black';
+				frame.color = '#1e90ff';
 
-// as of ZIM 5.5.0 you do not need to put zim before ZIM functions and classes
-var frame = new Frame(scaling, width, height);
-frame.on("ready", function() {
-    zog("ready from ZIM Frame"); // logs in console (F12 - choose console)
+				// see http://zimjs.com/code/learn.html for video and code tutorials
+				// see http://zimjs.com/code/docs.html for documentation
+				// see http://zimjs.com/code/bits.html for 64 Interactive Media techniques
 
-    var stage = frame.stage;
-    var stageW = frame.width;
-    var stageH = frame.height;
-    frame.outerColor = "black";
-    frame.color = "#1e90ff";
+				// put your code here (you can delete this sample code)
 
-    // see http://zimjs.com/code/learn.html for video and code tutorials
-    // see http://zimjs.com/code/docs.html for documentation
-    // see http://zimjs.com/code/bits.html for 64 Interactive Media techniques
+				//backgroun animation
+				var circles = new Container(stageW, stageH).addTo(stage);
 
-    // put your code here (you can delete this sample code)
+				circles.animate([{ obj: { alpha: 0 }, from: true, time: 1500, wait: 1500 }]);
 
-//backgroun animation
-		var circles = new Container (stageW,stageH)
-				.addTo(stage);
-
-		circles.animate([
-				{obj:{alpha:0},from:true,time:1500,wait:1500},
-			]);
-
-		loop(16, function(){
-				new Circle(rand(20,100),"green")
+				loop(16, function () {
+					new Circle(rand(20, 100), 'green')
 						.addTo(circles)
-						.pos(rand(stageW),rand(stageH))
-						.alp(rand(.1,.5))
+						.pos(rand(stageW), rand(stageH))
+						.alp(rand(0.1, 0.5))
 						.animate({
-								obj:{scale:[.1, .5, .7, 1.3, 1.5, 2]},
-								time:{min:5000, max:10000},
-								loop:true,
-								rewind:true,
-								id:"circles"
+							obj: { scale: [0.1, 0.5, 0.7, 1.3, 1.5, 2] },
+							time: { min: 5000, max: 10000 },
+							loop: true,
+							rewind: true,
+							id: 'circles',
 						});
+				});
 
-		});
+				var simbols = new Container(stageW, stageH).centerReg(stage).mov(35, 60).sca(0.9);
 
+				//Rectangle outline
+				var rect = new Rectangle(300, 300, null, 'white', 8).centerReg(stage).rot(45).mov(10, 0).sca(0.8);
 
-	  var simbols = new Container(stageW,stageH)
-		.centerReg(stage)
-		.mov(35,60)
-		.sca(.90);
-
-//Rectangle outline
-	  var rect = new Rectangle(300,300,null,"white",8)
-		.centerReg(stage)
-		.rot(45)
-		.mov(10,0)
-		.sca(.8);
-
-		rect.animate([// animation series
-				{obj:{alpha:0,rotation:360},
-				from:true,
-				time:900,
-				wait:700,
-			  ease:"backOut"},
-			]);
-
-    var lines = new Container(stageW,stageH)
-		.centerReg(stage);
-
-		var rect = new Rectangle(400,400,null,"yellowgreen",2)
-		.centerReg(lines)
-		.rot(45)
-		.mov(10,0);
-
-		lines.animate([// animation series
-				{obj:{alpha:0},
-				from:true,
-				time:700,
-				wait:1400},
-			]);
-
-//symbol animation
-		var simbol = new Container(stageW,stageH)
-		.centerReg(simbols);
-
-		frame.loadAssets(["simbol.png","sneakers2.png","ball.png"],"assets/");
-		frame.on("complete", function(){
-
-			var shape = frame.asset("simbol.png")
-			.centerReg(simbol)
-			.mov(0,-60)
-			.sca(.35)
-
-      simbol.animate([// animation series
-				  {obj:{alpha:0},from:true,time:700,wait:700},
+				rect.animate([
+					// animation series
+					{ obj: { alpha: 0, rotation: 360 }, from: true, time: 900, wait: 700, ease: 'backOut' },
 				]);
 
-//ball Damping
+				var lines = new Container(stageW, stageH).centerReg(stage);
 
-			var ball = frame.asset("ball.png")
-			.centerReg(stage)
-			.mov(0,30)
-			.sca(.2);
+				var rect = new Rectangle(400, 400, null, 'yellowgreen', 2).centerReg(lines).rot(45).mov(10, 0);
 
-			stage.on("stagemousemove", function(){
-					zim.Ticker.add(animate,stage);
-			},null, true);
+				lines.animate([
+					// animation series
+					{ obj: { alpha: 0 }, from: true, time: 700, wait: 1400 },
+				]);
 
-			var dampX = new Damp(ball.x, .07);
-			var dampY = new Damp(ball.y, .07);
+				//symbol animation
+				var simbol = new Container(stageW, stageH).centerReg(simbols);
 
-			function animate() {
-				  ball.x = dampX.convert(stage.mouseX);
-					ball.y = dampY.convert(stage.mouseY+80);
-			};
+				frame.loadAssets(['simbol.png', 'sneakers2.png', 'ball.png'], 'assets/');
+				frame.on('complete', function () {
+					var shape = frame.asset('simbol.png').centerReg(simbol).mov(0, -60).sca(0.35);
 
+					simbol.animate([
+						// animation series
+						{ obj: { alpha: 0 }, from: true, time: 700, wait: 700 },
+					]);
 
-			var sneaker = frame.asset("sneakers2.png")
-			.centerReg(stage)
-			.mov(0,30)
-			.sca(.3);
+					//ball Damping
 
+					var ball = frame.asset('ball.png').centerReg(stage).mov(0, 30).sca(0.2);
 
-//parallax
-				 var parallax = new Parallax([
-					 {obj:simbols, prop:"x", propChange:50},
-					 {obj:simbols, prop:"y", propChange:50, input:"mouseY",split:true},
-					 {obj:rect, prop:"x", propChange:-10},
-					 {obj:rect, prop:"y", propChange:-10, input:"mouseY",split:true},
-					 {obj:circles, prop:"x", propChange:-50},
-					 {obj:circles, prop:"y", propChange:-50, input:"mouseY",split:true}
-				 ]);
+					stage.on(
+						'stagemousemove',
+						function () {
+							zim.Ticker.add(animate, stage);
+						},
+						null,
+						true
+					);
 
-		});
+					var dampX = new Damp(ball.x, 0.07);
+					var dampY = new Damp(ball.y, 0.07);
 
+					function animate() {
+						ball.x = dampX.convert(stage.mouseX);
+						ball.y = dampY.convert(stage.mouseY + 80);
+					}
 
-//Line animation
-   var rects = new Container(stageW,stageH)
-	 .center(simbols);
+					var sneaker = frame.asset('sneakers2.png').centerReg(stage).mov(0, 30).sca(0.3);
 
-	 loop(3,function(i){
-		 var rect = new Rectangle(200,12,"#1e90ff",null,null,6)
-		 .addTo(rects)
-		 .pos(-100, 147 + i*20);
-	 });
+					//parallax
+					var parallax = new Parallax([
+						{ obj: simbols, prop: 'x', propChange: 50 },
+						{ obj: simbols, prop: 'y', propChange: 50, input: 'mouseY', split: true },
+						{ obj: rect, prop: 'x', propChange: -10 },
+						{ obj: rect, prop: 'y', propChange: -10, input: 'mouseY', split: true },
+						{ obj: circles, prop: 'x', propChange: -50 },
+						{ obj: circles, prop: 'y', propChange: -50, input: 'mouseY', split: true },
+					]);
+				});
 
-	 rects.animate({
-		 obj:{x:"400"},
-		 sequence:400,
-		 wait:700,
-		 time:1200,
-		 ease:"backOut",
-	 });
+				//Line animation
+				var rects = new Container(stageW, stageH).center(simbols);
 
-//logo animation
+				loop(3, function (i) {
+					var rect = new Rectangle(200, 12, '#1e90ff', null, null, 6).addTo(rects).pos(-100, 147 + i * 20);
+				});
 
-var miniballs = new Container();
+				rects.animate({
+					obj: { x: '400' },
+					sequence: 400,
+					wait: 700,
+					time: 1200,
+					ease: 'backOut',
+				});
 
-   loop(20,function(i){
-		 var dot = new Circle(14,frame.red)
-				.addTo(miniballs)
-				.pos(i*29)
-				.drag();
-		//  dot.blendMode = "difference";
-		 stage.update();
-	 })
+				//logo animation
 
+				var miniballs = new Container();
 
-	 var label = new Label({
- 			text:"adidas",
- 			size:44,
- 			color:"#ffffff",
- 			font:"TexGyreAdventor",
- 			align:"center",
- 	})
- 	.center(simbols)
- 	.mov(0,50)
- 	.animate({wait:500, obj:{alpha:0}, from: true, time:500});
+				loop(20, function (i) {
+					var dot = new Circle(14, frame.red)
+						.addTo(miniballs)
+						.pos(i * 29)
+						.drag();
+					//  dot.blendMode = "difference";
+					stage.update();
+				});
 
+				var label = new Label({
+					text: 'adidas',
+					size: 44,
+					color: '#ffffff',
+					font: 'TexGyreAdventor',
+					align: 'center',
+				})
+					.center(simbols)
+					.mov(0, 50)
+					.animate({ wait: 500, obj: { alpha: 0 }, from: true, time: 500 });
 
-	miniballs.center(stage).mov(12,30);
-	miniballs.animate([// animation series
-			{obj:{alpha:0},
-			from:true,
-			time:700,
-			wait:700},
-		]);
+				miniballs.center(stage).mov(12, 30);
+				miniballs.animate([
+					// animation series
+					{ obj: { alpha: 0 }, from: true, time: 700, wait: 700 },
+				]);
 
-	function spin(){
-		miniballs.animate({
-				 obj:{
-						 y:"-220",
-						 scale:".5"
-				 },
-				 sequence:150,
-				 rewind:true,
-				 time:700,
-				 sequenceCall:function(){
-							miniballs.on("mouseover",spin, null, true);//true means only once
-				 }
-		});
-	}
-	//spin();
-	miniballs.on("mouseover",spin, null, true);
+				function spin() {
+					miniballs.animate({
+						obj: {
+							y: '-220',
+							scale: '.5',
+						},
+						sequence: 150,
+						rewind: true,
+						time: 700,
+						sequenceCall: function () {
+							miniballs.on('mouseover', spin, null, true); //true means only once
+						},
+					});
+				}
+				//spin();
+				miniballs.on('mouseover', spin, null, true);
 
-  stage.update(); // this is needed to show any changes
+				stage.update(); // this is needed to show any changes
+			}); // end of ready
+		</script>
 
-}); // end of ready
-
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<style>
-    #logo{
-    	/*border: thin solid red;*/
-			width: 500px;
-			margin: 10px auto;
-    }
-		#logoCanvas{
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<style>
+			#logo {
+				/*border: thin solid red;*/
+				width: 500px;
+				margin: 10px auto;
+			}
+			#logoCanvas {
 				width: 100%;
-		}
-</style>
+			}
+		</style>
+	</head>
 
-    </head>
-    <body>
+	<body>
 		<!-- canvas with id="myCanvas" is made by zim Frame -->
-		<div id=logo></div>
-    </body>  
-
-    <!-- FOR JAVASCRIPT -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
-    <script src="vendors/js/jquery.waypoints.min.js"></script>
-    <script src="vendors/js/jquery.fullPage.js"></script>
-    <script src="resources/js/script.js"></script>
-    </body>
-  </script>
+		<div id="logo"></div>
+	</body>
 </html>
