@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        .ft_ng {font-family: 'Nanum Gothic', sans-serif;}
+        .ft_rb {font-family: 'Nanum Gothic', sans-serif;}
+        .container {margin: 0 auto; width: 950px;padding: 30px;}
+        .option {display: inline-block;width:50%;}
+        .fl {float: left;}
+        .fr {float: right;}
+        .wrapper {width: 320px; height: 568px; background: #02a5af;}
+        .btn__01 {margin-top: 20px; width: 320px;}
+
+        h3 {font-size: 1.2em;}
+
+        #lottie_01, #lottie_02{width: 228px; height: 80px;position: relative;top: 130px;left: 10px;}
+    </style>
+    <title>Life Planet Splashs</title>
+</head>
+<body>
+    <section class="container">
+        <h1 class="ft_ng">라이프플래닛 스플래시</h1>
+        <!-- 시안 1 -->
+        <div id="sp_01" class="option fl">
+            <h3 class="ft_rb">#01 Fade In Text</h3>
+            <div  class="wrapper">
+                <div id="lottie_01"></div> <!-- 로티 로고애니메이션 -->
+            </div>
+            <button id="btn_play_01" type="button" class="btn btn-primary btn__01">play</button>
+        </div>
+        <!-- 시안 2 -->
+        <div id="sp_02" class="option fr">
+            <h3 class="ft_rb">#02 Slick Sliding Text</h3>
+            <div  class="wrapper">
+                <div id="lottie_02"></div> <!-- 로티 로고애니메이션 -->
+            </div>
+            <button id="btn_play_02" type="button" class="btn btn-primary btn__01">play</button>
+        </div>
+    </section>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.5/lottie.min.js"></script>
+    <script>
+
+        var animation1 = bodymovin.loadAnimation({
+            container: document.getElementById('lottie_01'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            background: "transparent",
+            path: 'SplashAnimation01.json'
+        });
+
+        var animation2 = bodymovin.loadAnimation({
+            container: document.getElementById('lottie_02'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            background: "transparent",
+            path: 'SplashAnimation02.json'
+        });
+
+        var play_btn_01 = document.getElementById('btn_play_01');
+        var play_btn_02 = document.getElementById('btn_play_02');
+        
+        play_btn_01.addEventListener('click', function(){
+            console.log('animation start playing!');
+            animation1.goToAndPlay(0);
+        });
+
+        play_btn_02.addEventListener('click', function(){
+            console.log('animation start playing!');
+            animation2.goToAndPlay(0);
+        });
+
+    </script>
+</body>
+</html>
+
