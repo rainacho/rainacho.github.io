@@ -4,7 +4,7 @@
 
 /*small tablets to big tablets: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
-	#chart3 {
+	.container-chart:first-child > * {
 		display: none !important;
 	}
 	body {
