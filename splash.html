@@ -71,34 +71,62 @@
 
         <section class="section-description js--section-description">
             <div class="row">
-                <h2>Little Prince</h2>
-                <p class="long-copy sub-title">Three.js / JavaScript</p>
+                <h2>App Splash Animation</h2>
+                <p class="long-copy sub-title">Lottie Animation / After Effect / Cinema4D</p>
                 <p class="long-copy row">
-                  Inspired by the childhood story
-                  of ‘The Little Prince’, a wanderer who explores the extra terrestrial plains of the
-                  vast universe and is frequented pictured sitting on a planet. Create a
-                  3D version where users could interact with the character, planet, and space debris.
+                  교보라이프 플래닛 앱 실행시 나오는 첫 로딩페이지 작업을 담당하였습니다.<br>
+                  2021년에 제작된 스플래시 화면은 2D 로티애니메이션으로 진행되었으며, 자사 브랜드가 담고 있는 스마일 'e'를 강조한 컨셉입니다.<br>
+                  2022년에 사용 할 스플래시 화면은 3D 로티애니메이션으로 C4D를 함께 사용하였으며, 
+                  로고가 부드럽게 화면에 나타나는 스토리를 컨셉을 통해 보험사가 주는 딱딱한 이미지를 벗어나
+                  고객이 일상에서 쉽게 다가갈 수 있는 브랜드 이미지를 전달 하고자 하였습니다. 
                 <p>
-                <a class="btn long-copy row js--wp-1" href="https://rainacho.github.io/LittlePrince-Git-Raina/LittlePrince.html" target="_blank">LAUNCH PROJECT</a>
+                <a class="btn long-copy row js--wp-1" href="https://play.google.com/store/apps/details?id=com.kyobo.lifeplanet.insurance&hl=ko&gl=US" target="_blank">App Download</a>
             </div>
             <div class="clearfix"></div>
         </section>
-        <section class="section-media-bg-white">
-            <video id="lightbulb_video_01" autoplay loop muted>
-                <source src="resources/video/LittlePrince_video_01.mp4" type="video/mp4" >
-            </video>
+        <section id="splash_lottie" class="section-lottie-bg-white pb-2">
+            <p class="long-copy sub-title">App Splash Animation</p>
+            <div class="row">
+                <div class="col span-1-of-2 ">
+                    <lottie-player class="lottie" src="https://assets7.lottiefiles.com/packages/lf20_qc35i2mf.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                    <p class="description">2D Splash Concept</p>
+                </div>
+                <div class="col span-1-of-2 ">
+                    <lottie-player class="lottie" src="https://assets5.lottiefiles.com/packages/lf20_fcp4vl3i.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+                    <p class="description">3D Splash Concept</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-group-member">
+            <div class="row">
+                <p class="long-copy sub-title">PROJECT TEAM MEMBERS</p>
+                <ul>
+                    <li><a href="https://www.rainadesign.co/" target="_blank">Raina Cho &nbsp;<i class="ion-android-open"></i></a><br><small>(Interaction desinger)</small></li>
+                    <li>Lee Hyeon Min<br><small>(iOS Developer)</small></li>
+                    <li>Han Man Ho<br><small>(Android Developer)</small></li>
+                </ul>
+            </div>
         </section>
         <section class="section-image">
             <div class="row">
-                <img class="full" src="resources/img/LittlePrince_image_04.jpg" alt="LittlePrince_image_01.jpg"/>
-                <img class="full" src="resources/img/LittlePrince_image_01.jpg" alt="LittlePrince_image_01.jpg"/>
-                <img class="full" src="resources/img/LittlePrince_image_02.jpg" alt="LittlePrince_image_02.jpg"/>
-                <img class="full" src="resources/img/LittlePrince_image_03.jpg" alt="LittlePrince_image_03.jpg"/>
+                <p class="long-copy sub-title">MOTION FRAME MOCKUP</p>
+                <div class="col span-1-of-2" style="margin-left: 0;">
+                    <img class="full" src="resources/img/splash_image_01.png" alt="splash_image_01.png" />
+                </div>
+                <div class="col span-1-of-2 ">
+                    <img class="full" src="resources/img/splash_image_02.png" alt="splash_image_02.png"/>
+                </div>
+                <div class="col span-1-of-2" style="margin-left: 0;">
+                    <img class="full" src="resources/img/splash_image_03.png" alt="splash_image_03.png" />
+                </div>
+                <div class="col span-1-of-2 ">
+                    <img class="full" src="resources/img/splash_image_04.png" alt="splash_image_04.png"/>
+                </div>
             </div>
         </section>
         <div class="section-works-navi flex-row">
-           <div><a href="sheridanMap.html"><i class="ion-chevron-left"></i>prev</a></div>
-           <div><a href="Appetite.html">next</a><i class="ion-chevron-right"></i></div>
+           <div><a href="pepsi.htm"><i class="ion-chevron-left"></i>prev</a></div>
+           <div><a href="nativeapp.html">next</a><i class="ion-chevron-right"></i></div>
         </div>
         <section class="section-footer js--section-contact">
             <div class="row">
@@ -117,6 +145,7 @@
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="vendors/js/jquery.fullPage.js"></script>
     <script src="resources/js/script.js"></script>

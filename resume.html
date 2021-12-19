@@ -30,7 +30,7 @@
 
         <!-- CSS -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Raina Cho | Frontend Developer / UX Designer</title>
+        <title>Raina Cho | UI Developer</title>
         <link rel="stylesheet" href="vendors/css/normalize.css">
         <link rel="stylesheet" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" href="vendors/css/grid.css">
@@ -67,33 +67,83 @@
         </header>
 
         <section class="section-aboutme js--section-aboutme">
-            <div class="row">
+            <div class="row box">
                 <h2>ABOUT ME</h2>
-                <div class="row"><img src="resources/img/myPhoto.png" alt="myPhoto.png"></div>
-                <p class="long-copy row js--wp-1">안녕하세요, UX 디자인과 UI개발 실무경험을 바탕으로 웹개발을 하고 있는 조혜란입니다 .<br>
-                캐나다 웹에이젼시에서 유명 클라이언트(Pepsi, Rogers, Merck)와의 다양한 작업 경험을 통하여 SEO, 크로스 브라우징, 반응형 웹사이트를 정확하고 빠르게 
-                제작가능합니다.<br>현재 한국에서 핀테크회사인 NICE비즈니스플랫폼에서 웹개발자로 일하고 있습니다.<br>개발환경은 IntelliJ, Spring Framework, Jira, Sourcetree이며, 개발언어는 Html5, CSS3, javaScript(ES5/ES6), toastUI, jQuery, 
-                Jstl, handlebar, Java, Sql, Restful API입니다.<br> 
-                최근 React와 nodejs에 관심이 많고 개인 프로젝트를 진행중입니다. 
-                <p>
+                <div class="row" style="padding-top: 20px;">
+                  <img src="resources/img/myPhoto.png" alt="myPhoto.png">
+                  <div class="col">
+                    <p class="js--wp-1 long-copy">안녕하세요, UI Developer 조혜란입니다. 캐나다 웹에이젼시인 'Elite Digital Company'와 국내 NICE계열사인 '나이스비즈니스플랫폼' Development Part에서 프론드앤드개발자로 일한 경험이 있고,
+                      현재 교보생명 온라인생보사인 '교보라이프플래닛' Digital Experience Part에서 UI개발 및 인터랙션 디자인 업무를 담당하고 있습니다.<br><br>
+                      Javascript언어에 관심이 많고, 이분야에 전문성을 키우기 위해 Vanilla Javascript, Vuejs 그리고 알고리즘에 초점을 두고 꾸준히 공부하고 있습니다.  
+                    <p>
+                  </div>
+                </div>
+                
             </div>
             <div class="clearfix"></div>
         </section>
+        
+        <section class="section-skill">
+          <h2>SKILL</h2>
+          <div class="row">
+              <div class="col span-1-of-2 box">
+                  <h3>DEVELOPMENT</h3>
+                  <div class="container-chart">
+                    <canvas id="chart1"></canvas>
+                  </div>
+              </div>
+              <div class="col span-1-of-2 box">
+                  <h3>GRAPHIC TOOL</h3>
+                  <div class="container-chart">
+                    <canvas id="chart2"></canvas>
+                  </div>
+              </div>
+          </div>
+      </section>
 
 
         <section class="section-experience">
             <div class="row box">
                 <h2>EXPERIENCE</h2>
+                <!-- Chart Section -->
+                <div class="row">
+                    <div class="container-chart mg-top-25 ">
+                      <canvas id="chart3" width="900" height="70"></canvas>
+                      <p class="sub-desc">As of 2021(unit: year)</p>
+                    </div>
+                </div>
+                <!-- // Chart Section -->
                 <div>
                   <div class="col span-1-of-2">
-                    <h3>WEB<br>DEVELOPER</h3>
+                    <h3>UI<br>DEVELOPER</h3>
+                  </div>
+                  <div class="col span-1-of-2 experience">
+                    <p class="sub-title"><i class="ion-briefcase"></i>&nbsp;&nbsp;<a href="https://niceabc.co.kr/" taget="_blank">(주)교보라이프플래닛</a> | Insuretech</p>
+                    <ul>
+                      <li>바른보장플러스(보험분석서비스)가계도 UI 개발</li>
+                      <li>인사평가시스템 UI개발</li>
+                      <li>도서취향 찾기(MBTI) UI 및 로직개발</li>
+                      <li>보험용어사전 UI개발</li>
+                      <li>신상품 페이지 UI개발</li>
+                      <li>카카오페이 내보험관리 UI개발</li>
+                      <li>모바일 앱 스플래쉬 화면 고도화</li>
+                      <li>네이티브 앱 마이페이지 마이크로인터랙션</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="col span-1-of-2">
+                    <h3>FRONTEND<br>DEVELOPER</h3>
                   </div>
                   <div class="col span-1-of-2 experience">
                     <p class="sub-title"><i class="ion-briefcase"></i>&nbsp;&nbsp;<a href="https://niceabc.co.kr/" taget="_blank">(주)NICE비즈니스플랫폼</a> | Fintech</p>
                     <ul>
-                      <li>웹서비스 유지보수</li>
-                      <li>신규 상품 페이지 개발</li>
-                      <li>UI개선 및 개발</li>
+                      <li>건설공제조합 대출신청사이트 UI개발</li>
+                      <li>나의혜택 페이지 UI개발</li>
+                      <li>신상품을 위한 대출 신청화면 개발</li>
+                      <li>대출신청 팝업 파일 업로드UI 개선</li>
+                      <li>회원가입, 회원정보 수정페이지 UI개발</li>
+                      <li>자동투자옵션 UI개발</li>
                     </ul>
                   </div>
                 </div>
@@ -104,10 +154,11 @@
                   <div class="col span-1-of-2 experience">
                     <p class="sub-title"><i class="ion-briefcase"></i>&nbsp;&nbsp;<a href="https://elitedigitalagency.com/" taget="_blank">ELITE DIGITAL</a> | Web &  Marketing Agency (Canada)</p>
                     <ul>
-                      <li>디자인시안을 HTML, Scss, javaScript를 사용하여 반응형 웹사이트로 제작</li>
-                      <li>디자인팀, 백엔드디벨로퍼, PM과 함께 협업하여 유저인터페이스를 개선</li>
-                      <li>QA팀으로 부터 받은 피드백을 통해 버그 및 크로스브라우징 이슈 해결</li>
-                      <li>재사용 및 유지보수 가능한 템플릿 개발 및 실제 프로젝트에 적용</li>
+                      <li>ILUMINA 메디컬서비스 클라이언트 웹사이트리뉴얼</li>
+                      <li>PEPSICO 신상품 홍보를 위한 마이크로웹사이트 다수 제작</li>
+                      <li>PEPSICO사의 Dealership 판매촉진 이벤트 웹사이트 제작</li>
+                      <li>ROGERS 신규 상품소개를 위한 이벤트 컨퍼런스 사이트 제작</li>
+                      <li>재사용 및 유지보수 가능한 템플릿 고도화</li>
                       <li>Wordpress, Tridion 등 CMS 플랫폼 개발</li>
                     </ul>
                   </div>
@@ -119,8 +170,9 @@
                     <div class="col span-1-of-2 experience">
                       <p class="sub-title"><i class="ion-briefcase"></i>&nbsp;&nbsp;재신정보 | IT Company</p>
                       <ul>
-                        <li>한국KDN ERP 리뉴얼 및 유지보수 담당</li>
-                        <li>신규페이지 개발</li>
+                        <li>한전KDN ERP 인사노무 마이페이지 근태관리 캘린더 개발 </li>
+                        <li>한전KDN ERP 인사노무 교육신청/교육이력 메뉴 개발</li>
+                        <li>한전KDN ERP포털 유지보수</li>
                       </ul>
                     </div>
                 </div>
@@ -135,22 +187,6 @@
                         <li>브랜드 스타일가이드 디자인</li>
                         <li>배너, 이메일템플릿, 홍보용 브로슈어 제작</li>
                       </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="col span-1-of-2">
-                      <h3>DESIGNER | ILLUSTRATOR</h3>
-                    </div>
-                    <div class="col span-1-of-2 experience">
-                        <p class="sub-title"><i class="ion-person"></i>&nbsp;&nbsp;프리랜서</p>
-                        <ul>
-                          <li>홈페이지 마이크로사이트 제작 | <a href="htthttp://sev.iseverance.com/" target="_blank"><i>세브란스(연세의료원)</i>&nbsp;&nbsp;<i class="ion-android-open"></i></a></li>
-                          <li>홈페이지 메디컬 일러스트 제작 | <a href="http://www.4-ever.co.kr/english/" target="_blank"><i>포에버 네트워크</i>&nbsp;&nbsp;<i class="ion-android-open"></i></a></li>
-                          <li>다문화가족 아이들을 위한 동화책 제작 | <a href="https://www.savethechildren.net/" target="_blank"><i>세이브더칠드런</i>&nbsp;&nbsp;<i class="ion-android-open"></i></a></li>
-                          <li>디지털북 "Lucky Penny" 동화책 일러스트 제작 | <a href="http://www.tenstory.co.kr/" target="_blank"><i>텐스토리</i>&nbsp;&nbsp;<i class="ion-android-open"></i></a></li>
-                          <li>삼청동 프렌치레스토랑 웹사이트 제작 | 비엥에트르</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -186,77 +222,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="section-skill">
-            <h2>SKILL</h2>
-            <div class="row">
-                <div class="col span-1-of-3 box">
-                    <h3>DEVELOPMENT</h3>
-                    <ul>
-                      <li>HTML5 / CSS3(Scss)</li>
-                      <li>JavaScript (ES5/ES6/jQuery)</li>
-                      <li>CSS Framework (Bootstrap/Materializecss)</li>
-                      <li>Java Framework (Spring)</li>
-                      <li>PHP Framework (Phalcon/Larabel)</li>
-                      <li>React / Vuejs</li>  
-                      <li>Java / SQL</li>
-                      <li>Git</li>  
-                    </ul>
-                </div>
-                <div class="col span-1-of-3 box">
-                    <h3>GRAPHIC TOOL</h3>
-                    <ul>
-                      <li>Illustrator</li>
-                      <li>Photoshop</li>
-                      <li>InDesign</li>
-                      <li>After Effects</li>
-                    </ul>
-                </div>
-                <div class="col span-1-of-3 box">
-                    <h3>UX DESIGN TOOL</h3>
-                    <ul>
-                      <li>Sketch (Mac)</li>
-                      <li>Adobe XD (Window)</li>
-                      <li>Invision</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="section-project">
-            <div class="row box">
-                <h2>PROJECT</h2>
-                <h3>UX DESIGN</h3>
-                <ul>
-                  <li><a href="QuiCar.html" target="_blank">Rental Car Application<i class="ion-android-open"></i></a></li>
-                  <li><a href="UberAppleWatch.html" target="_blank">Uber Smart Watch Application<i class="ion-android-open"></i></a></li>
-                  <li><a href="NespressoMachine.html" target="_blank">Nespresso Machine Physical Interface<i class="ion-android-open"></i></a></li>
-                </ul>
-                <h3>WEB APPLICATION</h3>
-                <p>PROFESSIONAL WORK</p>
-                <ul>
-                  <li><a href="ilumina.html" target="_blank">Ilumina Website<i class="ion-android-open"></i></a></li>
-                  <li><a href="pepsi.html" target="_blank">2018-2019 Pepsi Contest<i class="ion-android-open"></i></a></li>
-                  <li><a href="conference.html" target="_blank">Rogers/LG Conference Site<i class="ion-android-open"></i></a></li>
-                </ul>
-                <p>INDIVIDUAL WORK</p>
-                <ul>
-                  <li><a href="sheridanMap.html" target="_blank">Campus Map Navigation<i class="ion-android-open"></i></a></li>
-                  <li><a href="Calculator.html" target="_blank">Light Bulb Calculator<i class="ion-android-open"></i></a></li>
-                  <li><a href="24hours.html" target="_blank">24Hours Application<i class="ion-android-open"></i></a></li>
-                  <li><a href="Appetite.html" target="_blank">Appetite Web Application<i class="ion-android-open"></i></a></li>
-                </ul>
-                <h3>INTERACTIVE CODING</h3>
-                <ul>
-                  <li><a href="LittlePrince.html" target="_blank">3D Little Prince<i class="ion-android-open"></i></a></li>
-                  <li><a href="BalloonLand.html" target="_blank">VR Balloon Land<i class="ion-android-open"></i></a></li>
-                </ul>
-
-
-            </div>
-        </section>
-
         <section class="section-contact js--section-contact">
             <div class="row">
                 <h2>SAY HELLO</h2>
@@ -271,7 +236,7 @@
                       Feel free to connect with me on social media!
                     </p>
                     <p><i class="ion-ios-email icon-small"></i>&nbsp;chohr82@gmail.com</p>
-                    <p>RAINA CHO © 2020</p>
+                    <p>RAINA CHO © 2022</p>
             </div>
         </section>
 
@@ -282,9 +247,153 @@
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="vendors/js/jquery.fullPage.js"></script>
     <script src="resources/js/script.js"></script>
     </body>
+  </script>
+
+  <script>
+    var lastScrollPosition = 0;  
+    var fired = 0;
+    window.addEventListener('scroll', function(e) {
+      lastScrollPosition = window.scrollY;
+
+      if(fired == 0 && lastScrollPosition >=500){
+        fnDrawChart();
+        fired = 1;
+      }
+    });
+
+    
+    var fnDrawChart = function(){
+      Chart.defaults.font.size = 16;
+      Chart.defaults.font.color = '#62757e';
+
+      var chart1 = document.getElementById('chart1').getContext('2d');
+      var chart2 = document.getElementById('chart2').getContext('2d');
+      var chart3 = document.getElementById('chart3').getContext('2d');
+
+      var skillDev = new Chart(chart1, {
+        type: 'bar',
+        data: {
+          labels: ['HTML5', 'CSS','SCSS','JavaScript','jQuery','SQL'],
+          datasets: [{
+            label: 'level',
+            data:[
+              100,
+              100,
+              70,
+              80,
+              80,
+              30
+            ],
+            backgroundColor: '#22303d'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+                x: {
+                    grid: {
+                        display:false
+                    }
+                },
+                y: {
+                    grid: {
+                        display:false
+                    }   
+                }
+            },
+            plugins:{
+              legend: {
+                display: false
+              } 
+            } 
+        } 
+    });
+
+    var skillGraphic = new Chart(chart2, {
+        type: 'bar',
+        data: {
+          labels: ['Illustrator', 'Photoshop','AfterEffect','AdobeXD','Figma'],
+          datasets: [{
+            label: 'level',
+            data:[
+              100,
+              100,
+              70,
+              70,
+              70
+            ],
+            backgroundColor: '#00cca3'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+                x: {
+                    grid: {
+                        display:false
+                    }
+                },
+                y: {
+                    grid: {
+                        display:false
+                    }   
+                }
+          },
+          plugins:{
+            legend: {
+              display: false
+            } 
+          }
+        } 
+      });
+
+      setTimeout(function(){
+        var exprcDev = new Chart(chart3, {
+            type: 'bar',
+            data: {
+              labels: ["Period"],
+              datasets: [
+                {label: 'UX/UI designer', data:[3], backgroundColor:'#b3d4e0'},
+                {label: 'Frontend', data:[2], backgroundColor:'#5b9dd2'},
+                {label: 'UI developer', data:[3.5], backgroundColor:'#22303d'},
+              ]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                      stacked: true,
+                        grid: {
+                            
+                            display:false
+                        }
+                    },
+                    y: {
+                      stacked: true,
+                        grid: {
+                            
+                            display:false
+                        }   
+                    }
+                },
+                plugins:{
+                    legend: {
+                      display: false
+                    } 
+                } 
+              }
+            
+          });
+
+      }, 800);
+
+    }
+
+    
   </script>
 </html>
