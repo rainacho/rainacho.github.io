@@ -15,7 +15,7 @@ a:visited {
 html {
 	color: #62757e;
 	background-color: #fff;
-	font-family: 'Roboto', serif;
+	font-family: Roboto, Arial, Helvetica, 'malgun gothic', 'AppleGothicNeoSD', sans-serif;
 	font-weight: 400;
 	line-height: 1.65;
 	font-size: 1em; /*16px*/
@@ -377,7 +377,6 @@ section {
 
 p {
 	margin-bottom: 1.3em;
-	font-family: 'Roboto', serif;
 }
 
 h1,
